@@ -7,3 +7,5 @@ Play casually.
 Implementing UnityAds.
 
 Start Date: 20:31 06/09/2020
+
+### Rewarded ads implementation.
