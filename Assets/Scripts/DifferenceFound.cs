@@ -1,20 +1,24 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class DifferenceFound : MonoBehaviour
 {
+    private Image image;
 
     private void Start()
     {
-
+        image = GetComponent<Image>();
     }
 
-    private void Update()
+
+    
+    // My Methods
+
+    public void DifferenceSpotFound()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Difference found.");
-        }
-
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+        Debug.Log("Button pressed!");
     }
+
 
 }
