@@ -3,8 +3,7 @@
 public class CameraControls : MonoBehaviour
 {
     Vector3 touchPoint;
-    [SerializeField] private float zoomOutMin = 2.0f;
-    [SerializeField] private float zoomOutMax = 5.0f;
+    [SerializeField] private int zoomLevel = 0;
 
     private void Update()
     {
@@ -13,22 +12,7 @@ public class CameraControls : MonoBehaviour
             touchPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
-        if (Input.touchCount == 2)
-        {
-            Touch touchZero = Input.GetTouch(0);
-            Touch touchOne = Input.GetTouch(1);
-
-            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-            float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-            float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
-
-            float difference = currentMagnitude - prevMagnitude;
-
-            Zoom(difference * 0.01f);
-        }
-        else if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             Vector3 distanceDifference = touchPoint - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(distanceDifference);
@@ -36,9 +20,36 @@ public class CameraControls : MonoBehaviour
         }
     }
 
-    private void Zoom(float increment)
-        {
-            Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
-        }
 
+    // Press reset button to reset zoom to 5.
+    public void ResetZoom()
+    {
+        Camera.main.orthographicSize = 5.0f;
+        Camera.main.transform.position = new Vector3(0.0f, 0.0f, -10.0f);
+        zoomLevel = 0;
+    }
+    
+    // Press the zoom in button to zoom camera.
+    public void ZoomIn()
+    {
+        if (zoomLevel == 0)
+        {
+            ZoomMe(4.0f);
+        }
+        else if (zoomLevel == 1)
+        {
+            ZoomMe(3.0f);
+        }
+        else if (zoomLevel == 2)
+        {
+            ZoomMe(2.0f);
+        }
+    }
+
+    // zoom method - changing size.
+    private void ZoomMe(float f)
+    {
+        Camera.main.orthographicSize = f;
+        zoomLevel++;
+    }
 }

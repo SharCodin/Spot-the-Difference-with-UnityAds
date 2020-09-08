@@ -17,7 +17,7 @@ public class DifferenceFound : MonoBehaviour
     public void DifferenceSpotFound()
     {
         image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
-        Debug.Log("Button pressed!");
+
     }
 
 
