@@ -4,11 +4,21 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
-
+    [Header("Ads")]
     [SerializeField] private string gameId = "3808055";
     [SerializeField] private bool testMode = true;
+
+    [Header("GameObjects / Components")]
     [SerializeField] private GameObject hintButton = null;
     [SerializeField] private GameObject toastMessage = null;
+    [SerializeField] private TotalDifferences td = null;
+    [SerializeField] private GameObject hinter = null;
+    [SerializeField] private CameraControls cameraControls = null;
+
+    [Header("Debugging")]
+    [SerializeField] private int min = 1;
+    [SerializeField] private int max = 0;
+    [SerializeField] private int index = 0;
 
     string myPlacementId = "rewardedVideo";
 
@@ -42,6 +52,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             // Reward the user for watching the ad to completion.
+            max = td.CountDifferences();
+            index = Random.Range(min, max);
+            Transform hintTransform = td.GetDifferencePosition(index - 1);
+            cameraControls.ResetZoom();
+            GameObject obHinter = Instantiate(hinter, hintTransform.position, Quaternion.identity);
+            Destroy(obHinter, 3.0f);
         }
         else if (showResult == ShowResult.Skipped)
         {

@@ -23,9 +23,14 @@ public class TotalDifferences : MonoBehaviour
         myList.Remove(t);
     }
 
-    public int RemainingDifference()
+    public int CountDifferences()
     {
         return myList.Count;
+    }
+
+    public Transform GetDifferencePosition(int i)
+    {
+        return myList[i];
     }
 
 }

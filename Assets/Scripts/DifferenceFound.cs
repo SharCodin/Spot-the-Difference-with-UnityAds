@@ -28,7 +28,7 @@ public class DifferenceFound : MonoBehaviour
 
     private void CheckGameWin()
     {
-        if (td.RemainingDifference() <= 0)
+        if (td.CountDifferences() <= 0)
         {
             Debug.Log("Game Ended.");
         }

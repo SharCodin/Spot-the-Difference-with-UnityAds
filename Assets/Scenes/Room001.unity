@@ -1367,6 +1367,12 @@ MonoBehaviour:
   testMode: 1
   hintButton: {fileID: 1094207212}
   toastMessage: {fileID: 1299585970}
+  td: {fileID: 790546571}
+  hinter: {fileID: 4922487796461155697, guid: 63a4d68513cb7cf428fb627ea8702fae, type: 3}
+  cameraControls: {fileID: 973607955}
+  min: 1
+  max: 0
+  index: 0
 --- !u!4 &1196997086
 Transform:
   m_ObjectHideFlags: 0
