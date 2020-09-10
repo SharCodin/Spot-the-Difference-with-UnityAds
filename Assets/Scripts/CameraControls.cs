@@ -15,7 +15,6 @@ public class CameraControls : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 distanceDifference = touchPoint - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(distanceDifference);
             Camera.main.transform.position += distanceDifference;
         }
     }

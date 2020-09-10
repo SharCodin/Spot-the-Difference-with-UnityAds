@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
@@ -7,15 +7,16 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     [SerializeField] private string gameId = "3808055";
     [SerializeField] private bool testMode = true;
-    [SerializeField] private Text testText = null;
-    [SerializeField] private GameObject testButton = null;
+    [SerializeField] private GameObject hintButton = null;
+    [SerializeField] private GameObject toastMessage = null;
 
     string myPlacementId = "rewardedVideo";
 
 
     private void Start()
     {
-        testButton.SetActive(false);
+        hintButton.SetActive(false);
+        toastMessage.SetActive(false);
 
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameId, testMode);
@@ -30,7 +31,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         }
         else
         {
-            Debug.Log("Rewarded video is not ready at the moment! Please try again later!");
+            StartCoroutine(AdsNotLoaded());
         }
     }
 
@@ -41,7 +42,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             // Reward the user for watching the ad to completion.
-            testText.text = "Good job, you were rewarded.";
         }
         else if (showResult == ShowResult.Skipped)
         {
@@ -59,7 +59,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         if (placementId == myPlacementId)
         {
             // Optional actions to take when the placement becomes ready(For example, enable the rewarded ads button)
-            testButton.SetActive(true);
+            hintButton.SetActive(true);
         }
     }
 
@@ -78,6 +78,13 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void OnDestroy()
     {
         Advertisement.RemoveListener(this);
+    }
+
+    private IEnumerator AdsNotLoaded()
+    {
+        toastMessage.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        toastMessage.SetActive(false);
     }
 
 }
