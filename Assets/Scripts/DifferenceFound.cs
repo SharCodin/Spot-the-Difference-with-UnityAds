@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DifferenceFound : MonoBehaviour
 {
     private Image image;
     private TotalDifferences td;
+    private int currentBuildIndex;
 
     private void Start()
     {
         image = GetComponent<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
         td = FindObjectOfType<TotalDifferences>();
         td.AddToList(transform);
+        currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
 
@@ -30,12 +34,12 @@ public class DifferenceFound : MonoBehaviour
     {
         if (td.CountDifferences() <= 0)
         {
-            Debug.Log("Game Ended.");
+            SceneManager.LoadScene(currentBuildIndex + 1);
         }
     }
 
     private void DisplayDifferenceSprite()
     {
-        image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
     }
 }

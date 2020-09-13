@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &178464644
+--- !u!1001 &102464177
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image
       objectReference: {fileID: 0}
+    - target: {fileID: 1964654090619890567, guid: 1e614f3efe0192648904f75dd8a33f54, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d6a2d3f16017ac4abcf5cae7d2020bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e614f3efe0192648904f75dd8a33f54, type: 3}
 --- !u!1001 &2072299335371577830
@@ -478,6 +482,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1052595265, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 204
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052595265, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052595268, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299335653199570, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299335653199575, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 247
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299335653199575, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 337
+      objectReference: {fileID: 0}
     - target: {fileID: 2072299335856886115, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
       propertyPath: m_Name
       value: Differences
@@ -569,6 +597,42 @@ PrefabInstance:
     - target: {fileID: 2072299335856886127, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336512362051, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336512362052, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336512362052, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336662297564, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336662297566, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 303
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299336662297566, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -197
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299337023915499, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299337023915499, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072299337023915510, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}

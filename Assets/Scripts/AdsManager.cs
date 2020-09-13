@@ -25,7 +25,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     private void Start()
     {
-        hintButton.SetActive(false);
+        // hintButton.SetActive(false);
         toastMessage.SetActive(false);
 
         Advertisement.AddListener(this);
