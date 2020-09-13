@@ -414,6 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 1196997085}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b4d59ce72989a142a348ea4553dcad4, type: 3}
+--- !u!1 &646113970474526107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173090698168309331, guid: 8b4d59ce72989a142a348ea4553dcad4, type: 3}
+  m_PrefabInstance: {fileID: 646113970474526106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1964654089902967806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -514,6 +519,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2072299335856886125, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
+      propertyPath: levelCompletedPanel
+      value: 
+      objectReference: {fileID: 646113970474526107}
     - target: {fileID: 2072299335856886126, guid: f38f63585cb5f4f4199bf4e54a3c2610, type: 3}
       propertyPath: m_Camera
       value: 

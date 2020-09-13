@@ -18,7 +18,6 @@ public class DifferenceFound : MonoBehaviour
     }
 
 
-    
     // My Methods
 
     public void DifferenceSpotFound()
@@ -34,7 +33,8 @@ public class DifferenceFound : MonoBehaviour
     {
         if (td.CountDifferences() <= 0)
         {
-            SceneManager.LoadScene(currentBuildIndex + 1);
+            PlayerPrefs.SetInt("Room Completed", currentBuildIndex);
+            td.LevelCompleted();
         }
     }
 
