@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 268002650}
   - component: {fileID: 268002649}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'Text: Quit'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -265,10 +265,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Quit
 --- !u!222 &268002650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 309565992}
   - component: {fileID: 309565991}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: 'Button: Play'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309565992}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681590922}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309565992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,7 +422,7 @@ GameObject:
   - component: {fileID: 309999033}
   - component: {fileID: 309999032}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: 'Button: Load Level'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,7 +490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309999033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681590922}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &309999033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,8 +552,9 @@ GameObject:
   - component: {fileID: 395364871}
   - component: {fileID: 395364873}
   - component: {fileID: 395364872}
+  - component: {fileID: 395364874}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'Text: Tutorial'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,10 +609,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Tutorial
 --- !u!222 &395364873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -596,6 +621,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395364870}
   m_CullTransparentMesh: 0
+--- !u!95 &395364874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395364870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74d3a7fbf5b3018419074a417435ab4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &449835312
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +653,7 @@ GameObject:
   - component: {fileID: 449835315}
   - component: {fileID: 449835314}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 'Button: Quit'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,7 +721,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449835315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681590922}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &449835315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +861,7 @@ GameObject:
   - component: {fileID: 681590921}
   - component: {fileID: 681590920}
   - component: {fileID: 681590919}
+  - component: {fileID: 681590922}
   m_Layer: 5
   m_Name: 'Panel: Buttons'
   m_TagString: Untagged
@@ -899,6 +956,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681590917}
   m_CullTransparentMesh: 0
+--- !u!114 &681590922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681590917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fced7b97b60bb49b04b40da3949814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &973607953 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7404173572313874903, guid: c2f6e39e25e3c204bb67acab115ccf64, type: 3}
@@ -1016,7 +1085,7 @@ GameObject:
   - component: {fileID: 1083796588}
   - component: {fileID: 1083796587}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'Text: Tutorial'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1071,10 +1140,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Load Level
 --- !u!222 &1083796588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1311,7 +1380,7 @@ GameObject:
   - component: {fileID: 1851886217}
   - component: {fileID: 1851886216}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'Text: Play'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,10 +1435,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Play
 --- !u!222 &1851886217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1391,7 +1460,7 @@ GameObject:
   - component: {fileID: 1982182237}
   - component: {fileID: 1982182236}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 'Button: Tutorial'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1459,7 +1528,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982182237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 681590922}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Tutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1982182237
 MonoBehaviour:
   m_ObjectHideFlags: 0
