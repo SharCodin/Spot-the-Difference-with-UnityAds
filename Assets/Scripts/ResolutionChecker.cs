@@ -9,9 +9,6 @@ public class ResolutionChecker : MonoBehaviour
 
     private void Start()
     {
-
-        Debug.Log(mainMenuButton.name, mainMenuButton);
-
         Rect myRect = Screen.safeArea;
         if (myRect.width < 700.0f)
         {

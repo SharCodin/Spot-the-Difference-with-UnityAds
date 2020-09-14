@@ -17,8 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel()
     {
-        // Level selector
-        Debug.Log("Level selector");
+        Camera.main.GetComponent<Animator>().Play("MainMenuCameraMovement");
     }
 
     public void Quit()
