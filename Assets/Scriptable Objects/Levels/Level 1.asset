@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93c69d31a865a542b2eb94599b63c0e, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  levelName: {fileID: 0}
+  images:
+  - {fileID: 21300000, guid: c00a624dd1fa4344e828cbbccf449f6c, type: 3}
+  - {fileID: 21300000, guid: cdcafe47803537a4c8f31fb985379e5d, type: 3}
+  - {fileID: 21300000, guid: cddd43b954b73f84ab555d02ec6e7366, type: 3}
+  - {fileID: 21300000, guid: 7d6a2d3f16017ac4abcf5cae7d2020bf, type: 3}
+  - {fileID: 21300000, guid: e3c8881f2f9a066468ba8ac2962a43a1, type: 3}
+  - {fileID: 21300000, guid: f9d810c5f40857c4a93563c20bbf4e00, type: 3}
+  - {fileID: 21300000, guid: aa8fbbd767f8e66438a54b49f689050c, type: 3}
+  levelName: Level 1
+  sceneName: Room001

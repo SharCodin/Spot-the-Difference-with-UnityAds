@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93c69d31a865a542b2eb94599b63c0e, type: 3}
   m_Name: Level 2
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  levelName: {fileID: 0}
+  images: []
+  levelName: Level 2
+  sceneName: Room002

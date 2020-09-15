@@ -15,6 +15,6 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: cddd43b954b73f84ab555d02ec6e7366, type: 3}
   title: City Life Pack
   room: Level 11 - 20
-  sceneToLoad: Room002
+  sceneToLoad: 11
   previousChapter: {fileID: 11400000, guid: 5f2a8918ba166c048b4fb14ebf45d9ca, type: 2}
   nextChapter: {fileID: 11400000}
