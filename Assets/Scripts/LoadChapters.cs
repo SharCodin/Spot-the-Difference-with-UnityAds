@@ -4,10 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class LoadChapters : MonoBehaviour
 {
-
+    [Header("Scriptable Object to Assign")]
     [SerializeField] private SO_LoadLevelChapters currentChapter = null;
+
+    [Header("GameObjects to Assign")]
     [SerializeField] private GameObject picture = null;
     [SerializeField] private GameObject title = null;
+    [SerializeField] private GameObject room = null;
+
+    private int startingSceneIndex;
 
     private void Start()
     {
@@ -17,7 +22,8 @@ public class LoadChapters : MonoBehaviour
     private void GetInformationForChapter()
     {
         picture.GetComponent<Image>().sprite = currentChapter.GetImage();
-        title.GetComponent<Text>().text = currentChapter.GetTitle();        
+        title.GetComponent<Text>().text = currentChapter.GetTitle();
+        room.GetComponent<Text>().text = currentChapter.GetRoom();
     }
 
     public void NextChapter()
@@ -34,7 +40,13 @@ public class LoadChapters : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(currentChapter.GetScene());
+        SceneIndex();
+        Camera.main.GetComponent<Animator>().Play("Camera_GoToRooms");
+    }
+
+    public int SceneIndex()
+    {
+        return startingSceneIndex = currentChapter.GetScene();
     }
 
     public void BackToMainMenu()

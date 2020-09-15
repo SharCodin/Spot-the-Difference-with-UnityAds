@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LoadLevelChapter1
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: c00a624dd1fa4344e828cbbccf449f6c, type: 3}
-  title: Green Nature
+  title: Green Nature Pack
+  room: Level 1- 10
+  sceneToLoad: Room001
   previousChapter: {fileID: 11400000}
   nextChapter: {fileID: 11400000, guid: 91e05bdaaa25e7b48a8caa142ff1007f, type: 2}
-  sceneToLoad: Room001

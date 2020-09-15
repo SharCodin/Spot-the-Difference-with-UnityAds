@@ -7,9 +7,10 @@ public class SO_LoadLevelChapters : ScriptableObject
 {
     [SerializeField] private Sprite image = null;
     [SerializeField] private string title = null;
+    [SerializeField] private string room = null;
+    [SerializeField] private int sceneToLoad = 0;
     [SerializeField] private SO_LoadLevelChapters previousChapter = null;
     [SerializeField] private SO_LoadLevelChapters nextChapter = null;
-    [SerializeField] private string sceneToLoad = null;
 
     public Sprite GetImage()
     {
@@ -19,6 +20,11 @@ public class SO_LoadLevelChapters : ScriptableObject
     public string GetTitle()
     {
         return title;
+    }
+
+    public string GetRoom()
+    {
+        return room;
     }
 
     public SO_LoadLevelChapters GetPreviousChapter()
@@ -31,7 +37,7 @@ public class SO_LoadLevelChapters : ScriptableObject
         return nextChapter;
     }
 
-    public string GetScene()
+    public int GetScene()
     {
         return sceneToLoad;
     }
