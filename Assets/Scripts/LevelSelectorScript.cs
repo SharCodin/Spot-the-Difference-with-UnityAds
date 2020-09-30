@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,17 +14,45 @@ public class LevelSelectorScript : MonoBehaviour
     [SerializeField] private Text[] texts = null;
 
     [Header("Scriptable Objects")]
-    [SerializeField] private LevelSelector currentLevel = null;
+    [SerializeField] private List<LevelSelector> currentLevel = null;
 
     private int levelIndex = 0;
 
+    private int levelSelectorIndex = 0;
+
+    public int LevelSelectorIndex
+    {
+        get => levelSelectorIndex;
+        set 
+        { 
+            levelSelectorIndex = value;
+            if (levelSelectorIndex <= 0)
+                levelSelectorIndex = 0;
+            else if (levelSelectorIndex >= currentLevel.Count)
+                levelSelectorIndex = currentLevel.Count - 1;
+            Debug.Log("Set:" + levelSelectorIndex);
+        }
+    }
+
     private void Start()
+    {
+        LoadDetails();
+    }
+
+    public void LoadDetails()
     {
         levelIndex = loadChapter.SceneIndex();
 
-        for(int i=0; i < 7; i++)
+        for (int i = 0; i < 10; i++)
         {
-            images[i].GetComponent<Image>().sprite = currentLevel.GetImages()[i];
+            try
+            {
+                images[i].GetComponent<Image>().sprite = currentLevel[levelSelectorIndex].GetImages()[i];
+            }
+            catch(IndexOutOfRangeException e)
+            {
+                return;
+            }
             texts[i].GetComponent<Text>().text = "Level " + levelIndex;
             levelIndex++;
         }
@@ -34,4 +64,6 @@ public class LevelSelectorScript : MonoBehaviour
     {
         SceneManager.LoadScene(loadChapter.SceneIndex() + index);
     }
+
+
 }

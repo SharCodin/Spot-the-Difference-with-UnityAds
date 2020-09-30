@@ -20,5 +20,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e3c8881f2f9a066468ba8ac2962a43a1, type: 3}
   - {fileID: 21300000, guid: f9d810c5f40857c4a93563c20bbf4e00, type: 3}
   - {fileID: 21300000, guid: aa8fbbd767f8e66438a54b49f689050c, type: 3}
+  - {fileID: 21300000, guid: 8656b56b0a78bcb4fa874a90016e0e27, type: 3}
+  - {fileID: 21300000, guid: 8ae7ff1a931d51d45854f22f72801feb, type: 3}
+  - {fileID: 21300000, guid: 6b58d40a52d6d804ab99dd10db5729f5, type: 3}
   levelName: Level 1
   sceneName: Room001

@@ -9,24 +9,39 @@ EditorBuildSettings:
     path: Assets/Scenes/a_Main Menu.unity
     guid: 0ef8228f3127eee44b64b5b018886bc1
   - enabled: 1
-    path: Assets/Scenes/Room001.unity
+    path: Assets/Scenes/Green/Room001.unity
     guid: fbd2f2059a5483a40a5add4952aabe6b
   - enabled: 1
-    path: Assets/Scenes/Room002.unity
+    path: Assets/Scenes/Green/Room002.unity
     guid: 817ff040064fa54418afc911bb842a2a
   - enabled: 1
-    path: Assets/Scenes/Room003.unity
+    path: Assets/Scenes/Green/Room003.unity
     guid: a664c9650e92dda45a5466fc9ea4cf3d
   - enabled: 1
-    path: Assets/Scenes/Room004.unity
+    path: Assets/Scenes/Green/Room004.unity
     guid: 9eaf57746564cc048aa8593a82ea6793
   - enabled: 1
-    path: Assets/Scenes/Room005.unity
+    path: Assets/Scenes/Green/Room005.unity
     guid: 3c93b2c498edaa8459bddf7599fdc53c
   - enabled: 1
-    path: Assets/Scenes/Room006.unity
+    path: Assets/Scenes/Green/Room006.unity
     guid: 679f334889c2e23449034f8aab686fc5
   - enabled: 1
-    path: Assets/Scenes/Room007.unity
+    path: Assets/Scenes/Green/Room007.unity
     guid: 5e7525383dc775b4b99b9c3ab395bfba
+  - enabled: 1
+    path: Assets/Scenes/Green/Room008.unity
+    guid: 45819bc1da471634792dd5cae1868e5c
+  - enabled: 1
+    path: Assets/Scenes/Green/Room009.unity
+    guid: 6c1b43bc7e25d764ea26863eebcee040
+  - enabled: 1
+    path: Assets/Scenes/Green/Room010.unity
+    guid: a8b418ae3b04a3548995ec512a9672b5
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene1.unity
+    guid: f449dbcbd0d599e488ef82f87e1b2078
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene2.unity
+    guid: f009273a55a500d499aa9a91400d6796
   m_configObjects: {}

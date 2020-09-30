@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b46888107f96f84e910e45a0b6832ed, type: 3}
   m_Name: LoadLevelChapter2
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: cddd43b954b73f84ab555d02ec6e7366, type: 3}
+  image: {fileID: 21300000, guid: 5b09237878592084396581097adb2bae, type: 3}
   title: City Life Pack
   room: Level 11 - 20
   sceneToLoad: 11

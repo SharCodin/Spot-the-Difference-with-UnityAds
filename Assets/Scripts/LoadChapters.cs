@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class LoadChapters : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class LoadChapters : MonoBehaviour
     [SerializeField] private GameObject picture = null;
     [SerializeField] private GameObject title = null;
     [SerializeField] private GameObject room = null;
+    [SerializeField] private LevelSelectorScript levelSelectorScript = null;
 
     private int startingSceneIndex;
 
@@ -28,14 +29,28 @@ public class LoadChapters : MonoBehaviour
 
     public void NextChapter()
     {
+        levelSelectorScript.LevelSelectorIndex = levelSelectorScript.LevelSelectorIndex + 1;
         currentChapter = currentChapter.GetNextChapter();
         GetInformationForChapter();
+        levelSelectorScript.LoadDetails();
     }
 
     public void PreviousChapter()
     {
         currentChapter = currentChapter.GetPreviousChapter();
         GetInformationForChapter();
+        try
+        {
+            levelSelectorScript.LevelSelectorIndex = levelSelectorScript.LevelSelectorIndex - 1;
+        }
+        catch(ArgumentOutOfRangeException e)
+        {
+            Debug.Log(e, this);
+            levelSelectorScript.LevelSelectorIndex = levelSelectorScript.LevelSelectorIndex + 1;
+            Debug.Log(levelSelectorScript.LevelSelectorIndex, this);
+            return;
+        }
+        levelSelectorScript.LoadDetails();
     }
 
     public void LoadScene()
