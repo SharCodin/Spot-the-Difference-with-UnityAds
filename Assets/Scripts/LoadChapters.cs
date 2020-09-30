@@ -40,7 +40,6 @@ public class LoadChapters : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneIndex();
         Camera.main.GetComponent<Animator>().Play("Camera_GoToRooms");
     }
 
@@ -52,6 +51,11 @@ public class LoadChapters : MonoBehaviour
     public void BackToMainMenu()
     {
         Camera.main.GetComponent<Animator>().Play("BackToMainMenu");
+    }
+
+    public void BackToChapterSelect()
+    {
+        Camera.main.GetComponent<Animator>().Play("Camera_GoToChapter");
     }
 
 }

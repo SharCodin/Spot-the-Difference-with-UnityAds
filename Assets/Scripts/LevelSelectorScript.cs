@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSelectorScript : MonoBehaviour
@@ -29,4 +30,8 @@ public class LevelSelectorScript : MonoBehaviour
         levelIndex = loadChapter.SceneIndex();
     }
 
+    public void LoadLevelChapter(int index)
+    {
+        SceneManager.LoadScene(loadChapter.SceneIndex() + index);
+    }
 }
