@@ -44,4 +44,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City/CityScene2.unity
     guid: f009273a55a500d499aa9a91400d6796
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene3.unity
+    guid: 39cd10b548d30f64680bba06a6a70818
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene4.unity
+    guid: b9bc585110537dc4bb53c5c4aef37820
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene5.unity
+    guid: 0ebbd79a54ba6204a990b0e13603f954
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene6.unity
+    guid: 547c105a7b192384fb0001e573c700cb
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene7.unity
+    guid: b66b814cbb0ad2c4988af04d6d0d15c1
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene8.unity
+    guid: 578272108ef2686408bcc0e0a5315165
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene9.unity
+    guid: 671c9aaf2d970024389edc277ba96ac1
+  - enabled: 1
+    path: Assets/Scenes/City/CityScene10.unity
+    guid: 7f7445e3cd551414582911b343394577
   m_configObjects: {}
