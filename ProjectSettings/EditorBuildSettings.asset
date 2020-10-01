@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City/CityScene10.unity
     guid: 7f7445e3cd551414582911b343394577
+  - enabled: 1
+    path: Assets/Scenes/z_Ending.unity
+    guid: 58ded412c6a5d8249a4d03ea7369248b
   m_configObjects: {}
